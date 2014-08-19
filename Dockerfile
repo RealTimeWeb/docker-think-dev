@@ -33,11 +33,11 @@ EXPOSE 80
 CMD ["/env/bin/python", "main.py"]
 
 # Build with
-# docker build --rm -t=book .
+# docker build --rm -t=comp-think .
 # Run with 
-# docker run --privileged -p 80:80 -i -t book
+# docker run --privileged -p 80:80 -i -t comp-think
 # Debug with
-# docker run --privileged -p 80:80 -i -t book /bin/bash
+# docker run --privileged -p 80:80 -i -t comp-think /bin/bash
 # Go to 
 # http://think-dev.cs.vt.edu:8080/
 
