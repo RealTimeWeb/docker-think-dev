@@ -13,10 +13,6 @@ RUN apt-get install -y vim curl wget build-essential git-core --no-install-recom
 # Python and Python Tools
 RUN apt-get install -y python-pip python python-dev supervisor --no-install-recommends
 
-# ENV NGINX_DOC_ROOT /var/www
-# ENV NGINX_LOG_ROOT /var/log/nginx
-# ENV SERVER_NAME example.com
-
 WORKDIR /app
 
 ONBUILD RUN virtualenv /env
@@ -24,11 +20,7 @@ ONBUILD ADD requirements.txt /app/requirements.txt
 ONBUILD RUN /env/bin/pip install -r /app/requirements.txt
 ONBUILD ADD . /app
 
-# RUN rm -f /etc/nginx/sites-enabled/default
-
 EXPOSE 80
-
-# CMD /usr/sbin/nginx -c /etc/nginx/nginx.conf
 
 CMD ["/env/bin/python", "main.py"]
 
