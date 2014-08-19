@@ -11,7 +11,7 @@ RUN apt-get install -y software-properties-common python-software-properties --n
 RUN apt-get install -y vim curl wget build-essential git-core --no-install-recommends
  
 # Python and Python Tools
-RUN apt-get install -y python-pip python python-dev --no-install-recommends
+RUN apt-get install -y python-pip python python-dev supervisor --no-install-recommends
 
 # ENV NGINX_DOC_ROOT /var/www
 # ENV NGINX_LOG_ROOT /var/log/nginx
